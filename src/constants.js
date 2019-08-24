@@ -1,0 +1,1 @@
+export const CHANGE_LOGIN_FIELD = 'CHANGE_LOGIN_FIELD';

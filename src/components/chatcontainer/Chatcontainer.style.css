@@ -1,0 +1,24 @@
+.chat-container{
+    display:flex;
+    justify-content: center
+}
+.user-list-container{
+    margin-right: auto;
+    /*border: 2px solid black;*/
+    width: 20%;
+    height: 600px;
+}
+
+.user-list-header{
+    border: 2px solid black
+}
+
+.user-list-element{
+    border: 1px solid grey
+}
+
+.chat-window-container{
+    border: 2px solid black;
+    width:80%;
+    margin-left:auto;
+}
