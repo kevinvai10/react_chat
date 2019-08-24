@@ -29,7 +29,6 @@ class App extends React.Component{
     const {isLoggedIn, user} = this.state;
     return (
       <div className="App">
-        <h1>hello</h1>
         <Router>
             <Route exact path="/" render={(props) => <Chatcontainer {...props} user={user} />}/>
             <Route exact path="/signin"  render={(props) => <Signin {...props} login={this.signin} />}/>  

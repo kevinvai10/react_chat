@@ -1,3 +1,40 @@
 .chat-window-header{
-    border: 1px solid black
+    border-bottom: 1px solid grey;
+}
+.chat-messages{
+    height:480px;
+    max-height: 480px;
+    overflow-y: hidden;
+}
+.chat-messages:hover{
+    overflow-y: scroll
+}
+
+.chat-message-input{
+    margin-left: 30px;
+}
+
+.chat-message-box-user1{
+    margin-top: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    min-width: 30px;
+    max-width:20%;
+    overflow: auto;
+    background-color: rgb(209, 235, 213); 
+    margin-left: auto;
+    margin-right: 7px;
+    padding: 10px;
+}
+
+.chat-message-box-user2{
+    margin-top: 10px;
+    border: 1px solid grey;
+    background-color: rgb(236, 248, 252); 
+    border-radius: 10px;
+    margin-left: 7px;
+    margin-right: auto;
+    min-width: 30px;
+    max-width:20%;
+    padding: 10px;
 }
