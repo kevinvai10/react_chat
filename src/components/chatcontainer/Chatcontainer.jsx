@@ -131,14 +131,30 @@ class Chatcontainer extends React.Component{
                         <h2 className="chat-container-text">User List</h2>
                     </header>
                     <div>
-                        <h3 className="chat-container-text">Direct Messages</h3>
+                        <h3 className="chat-container-text">Online Users</h3>
                     {
                         
                         userList && userList.map(user => {
+                            if(user.status === 'online'){
                                 if(user.id === myUser.id){
-                                    return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><strong className="chat-container-text">{user.name + " (You)"}</strong></div>
+                                    return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><p className="chat-container-text">{user.name + " (You)"}</p></div>
                                 }
-                                return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><strong className="chat-container-text">{user.name + "(" + user.status + ")"}</strong></div>
+                                return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><p className="chat-container-text">{user.name + " (" + user.status + ")"}</p></div>
+                            }
+                        })
+                    }
+                    </div>
+                    <div className="offline-users">
+                        <h3 className="chat-container-text">Offline Users</h3>
+                    {
+                     
+                        userList && userList.map(user => {
+                            if(user.status === 'offline'){
+                                if(user.id === myUser.id){
+                                    return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><em className="chat-container-text">{user.name + " (You)"}</em></div>
+                                }
+                                return <div key={user.id} className="user-list-element" onClick={() => this.joinChat(user)}><em className="chat-container-text">{user.name + " (" + user.status + ")"}</em></div>
+                            }
                         })
                     }
                     </div>
